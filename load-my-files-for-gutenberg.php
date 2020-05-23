@@ -12,18 +12,17 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-
 /**
  * 定数宣言
  */
-define( 'DEMO_PLUGIN_SLUG', 'demo-plugin' );
-define( 'DEMO_PLUGIN_URL', plugins_url( '/', __FILE__ ) );
-define( 'DEMO_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-define( 'DEMO_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+define( 'LMFFG_SLUG', 'demo-plugin' );
+define( 'LMFFG_URL', plugins_url( '/', __FILE__ ) );
+define( 'LMFFG_PATH', plugin_dir_path( __FILE__ ) );
+define( 'LMFFG_BASENAME', plugin_basename( __FILE__ ) );
 
 // バージョン情報
-// define( 'DEMO_PLUGIN_VERSION', '1.0.0' ); //本番
-define( 'DEMO_PLUGIN_VERSION', date('Ymdgis') ); //開発用 (ブラウザキャッシュを防ぐ)
+// define( 'LMFFG_VERSION', '1.0.0' ); //本番
+define( 'LMFFG_VERSION', date('Ymdgis') ); //開発用 (ブラウザキャッシュを防ぐ)
 
 
 /**
@@ -33,26 +32,26 @@ add_action( 'wp_enqueue_scripts', function() {
 
 	/* フロント & エディター共通のスタイル */
 	wp_enqueue_style(
-		DEMO_PLUGIN_SLUG.'-common-style',
-		DEMO_PLUGIN_URL. '/assets/css/common.css',
+		LMFFG_SLUG.'-common-style',
+		LMFFG_URL. '/assets/css/common.css',
 		[],
-		DEMO_PLUGIN_VERSION
+		LMFFG_VERSION
 	);
 
 	/* フロント用のスタイル */
 	wp_enqueue_style(
-		DEMO_PLUGIN_SLUG.'-front-style',
-		DEMO_PLUGIN_URL. '/assets/css/front.css',
+		LMFFG_SLUG.'-front-style',
+		LMFFG_URL. '/assets/css/front.css',
 		[],
-		DEMO_PLUGIN_VERSION
+		LMFFG_VERSION
 	);
 
 	/* フロント用のスクリプト */
 	wp_enqueue_script(
-		DEMO_PLUGIN_SLUG.'-front-script',
-		DEMO_PLUGIN_URL. '/assets/js/front.js',
+		LMFFG_SLUG.'-front-script',
+		LMFFG_URL. '/assets/js/front.js',
 		[],
-		DEMO_PLUGIN_VERSION,
+		LMFFG_VERSION,
 		true
 	);
 
@@ -66,26 +65,26 @@ add_action( 'enqueue_block_editor_assets', function() {
 
 	/* フロント & エディター共通のスタイル */
 	wp_enqueue_style(
-		DEMO_PLUGIN_SLUG.'-common-style',
-		DEMO_PLUGIN_URL. '/assets/css/common.css',
+		LMFFG_SLUG.'-common-style',
+		LMFFG_URL. '/assets/css/common.css',
 		[],
-		DEMO_PLUGIN_VERSION
+		LMFFG_VERSION
 	);
 
 	/* ブロックエディター用のスタイル */
 	wp_enqueue_style(
-		DEMO_PLUGIN_SLUG.'-editor-style',
-		DEMO_PLUGIN_URL. '/assets/css/editor.css',
+		LMFFG_SLUG.'-editor-style',
+		LMFFG_URL. '/assets/css/editor.css',
 		[],
-		DEMO_PLUGIN_VERSION
+		LMFFG_VERSION
 	);
 
 	/* ブロックエディター用のスクリプト */
 	wp_enqueue_script(
-		DEMO_PLUGIN_SLUG.'-editor-script',
-		DEMO_PLUGIN_URL. '/assets/js/editor.js',
+		LMFFG_SLUG.'-editor-script',
+		LMFFG_URL. '/assets/js/editor.js',
 		[],
-		DEMO_PLUGIN_VERSION,
+		LMFFG_VERSION,
 		true
 	);
 
